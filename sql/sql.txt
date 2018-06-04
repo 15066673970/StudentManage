@@ -1,0 +1,30 @@
+create database studentmanage;
+use studentmanage;
+create table user(
+	id int primary key auto_increment comment'用户id',
+    name varchar(20) not null comment '用户名',
+    password varchar(20)  not null comment '密码'
+	);
+insert into user(name,password) values
+	('admin','admin'),
+    ('test','test');
+    
+create table student(
+	id int primary key auto_increment comment '学生编号',
+    name varchar(20) not null comment '学生姓名',
+    gender varchar(6) not null comment '学生性别',
+    birthday date not null comment '出生日期',
+    telphone bigint not null comment  '手机号',
+    class_name varchar(20) not null comment '班级名称',
+    chinese double not null comment '语文成绩',
+    english double not null comment '英语成绩',
+	math double not null comment '数学成绩'
+	);
+    
+insert into student values
+	(31,'唐三藏','女','2018-02-20',13511111234,'金现代一班',100,100,100),
+    (32,'孙悟空','男','2017-02-20',13511111233,'金现代一班',90,100,100),
+    (33,'猪八戒','男','2018-02-20',13511111232,'金现代一班',100,90,100),
+    (34,'沙和尚','男','2013-02-20',13511111231,'金现代一班',50,100,100);
+    
+    
