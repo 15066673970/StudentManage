@@ -19,14 +19,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.quanlian.*;
+import com.quanlian.pojo.Student;
 import com.quanlian.pojo.User;
+import com.quanlian.services.StudentService;
 import com.quanlian.services.UserService;
+import com.sun.research.ws.wadl.Request;
 @Controller
 public class UserController {
 	@Autowired
 	UserService userService;
 	
 	
+	
+
 	
 	HttpSession httpSession;
 	User loginUser;
@@ -40,8 +45,5 @@ public class UserController {
 		return modelAndView;
 	}
 	
-	@RequestMapping("/test1")
-	public String  test1(){
-		return "redirect:http://www.baidu.com";
-	}
+
 }

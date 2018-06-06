@@ -34,7 +34,7 @@
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	<bean class="com.quanlian.exception.MyHandleException"></bean>
+	<!-- <bean class="com.quanlian.exception.MyHandleException"></bean> -->
 	
 	
 	

@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ page isELIgnored="false"%>
+<%@ page language="java" import="com.quanlian.pojo.Student" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <% 
@@ -14,8 +16,17 @@
 			<base href="<%=basePath%>" />
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     		<title>404</title>
+    		 <link href="css/error.css" type="text/css" rel="stylesheet">
 		</head>
 		<body>
 			<h1>404!</h1>
+			<h2>${id }</h2>
+			<h2>${pw }</h2>
+			<div>
+				<c:forEach items="${allStudent }" var="student">
+					<li>${student.name }</li>
+				</c:forEach>
+			</div>
+		
 		</body>
 </html>
